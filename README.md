@@ -1,0 +1,2 @@
+# projecteuler
+Learning project
