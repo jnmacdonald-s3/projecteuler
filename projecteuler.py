@@ -1,5 +1,13 @@
 #! /usr/bin/env python
-""" Project Euler
+""" 
+Project Euler - An interactive project with the purposes of learning:
+    - Python
+    - Following software requirements
+    - Following coding guidelines
+    - Using important standard Python libraries
+    - Producing inline documentation
+    - Introduction to Git and Github
+    - Collaborative development with Git
 """
 
 # ******************************************************************************
