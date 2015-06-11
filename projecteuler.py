@@ -53,13 +53,35 @@ logger.addHandler(console_h)
 # ******************************************************************************
 
 def problem1():
-    """ Problem 1
+    """ 
+    Problem 1: Find all natural numbers below 1000 which are 
+        multiples of 3 and 5
     """
+     # Variable Declaration
+    max_val = 1000
+    multiple1 = 3
+    multiple2 = 5
+    num_list = []
+    total = 0
+    logger.debug('variables declared for problem 1')
     
-    logger.info('test inside function')
-    logger.debug('does it work?')
+    # Loop through all values from 0 to but not including max_val and storing multiples
+    for i in range(max_val):
+        if i % multiple1 == 0:
+            num_list.append(i)
+        elif i % multiple2 == 0:
+            num_list.append(i)
+    logger.debug('list of values have been stored')
     
-    print("Problem 1")
+    # Summation of values in num_list
+    for value in num_list:
+        total = total + value
+    logger.debug('summation complete')
+    
+    print("Problem 1 Solution: ")
+    print("The sum of terms under %d which are multiples of %d and %d is %d \n" 
+          % (max_val, multiple1, multiple2, total))
+    
     return
 
 # ******************************************************************************
@@ -67,13 +89,19 @@ def problem1():
 # ******************************************************************************
 
 def main():
+    """
+    Main will run all problem functions and sequentially returning each problem
+    solution to stdout as well as 'projecteuler.log'
+    """
     
     # Problem Functions --------------------------------------------------------
     logger.info('Program Started')
     
+    
     # Function for each problem calls
     problem1()
 
+    
     logger.info('Program Completed')
     logger.info('--------------------------------------\n')
     

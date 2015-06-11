@@ -1,12 +1,7 @@
-2015-06-04 16:59:17,677 [ main:74 ] INFO  Program Started
-2015-06-04 16:59:17,677 [ problem1:58 ] INFO  test inside function
-2015-06-04 16:59:17,677 [ problem1:59 ] DEBUG  does it work?
-2015-06-04 16:59:17,677 [ main:79 ] INFO  Program Completed
-2015-06-04 16:59:17,677 [ main:80 ] INFO  --------------------------------------
-
-2015-06-04 17:02:15,786 [ main:72 ] INFO  Program Started
-2015-06-04 17:02:15,786 [ problem1:59 ] INFO  test inside function
-2015-06-04 17:02:15,788 [ problem1:60 ] DEBUG  does it work?
-2015-06-04 17:02:15,788 [ main:77 ] INFO  Program Completed
-2015-06-04 17:02:15,788 [ main:78 ] INFO  --------------------------------------
+2015-06-11 15:32:45,543 [ main:98 ] INFO  Program Started
+2015-06-11 15:32:45,545 [ problem1:66 ] DEBUG  variables declared for problem 1
+2015-06-11 15:32:45,545 [ problem1:74 ] DEBUG  list of values have been stored
+2015-06-11 15:32:45,545 [ problem1:79 ] DEBUG  summation complete
+2015-06-11 15:32:45,546 [ main:105 ] INFO  Program Completed
+2015-06-11 15:32:45,546 [ main:106 ] INFO  --------------------------------------
 
