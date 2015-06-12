@@ -65,7 +65,8 @@ def problem1():
     total = 0
     logger.debug('variables declared for problem 1')
     
-    # Loop through all values from 0 to but not including max_val and storing multiples
+    # Loop through all values from 0 to but not including max_val and storing 
+    # multiples
     for i in range(max_val):
         if i % multiple1 == 0:
             num_list.append(i)
@@ -78,8 +79,8 @@ def problem1():
         total = total + value
     logger.debug('summation complete')
     
-    print("Problem 1 Solution: ")
-    print("The sum of terms under %d which are multiples of %d and %d is %d \n" 
+    logger.info("Problem 1 Solution: ")
+    logger.info("The sum of terms under %d which are multiples of %d and %d is %d \n" 
           % (max_val, multiple1, multiple2, total))
     
     return
@@ -94,11 +95,9 @@ def main():
     solution to stdout as well as 'projecteuler.log'
     """
     
-    # Problem Functions --------------------------------------------------------
     logger.info('Program Started')
-    
-    
-    # Function for each problem calls
+
+    # Problem Functions --------------------------------------------------------
     problem1()
 
     
