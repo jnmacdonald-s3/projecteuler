@@ -85,6 +85,32 @@ def problem1():
     
     return
 
+def problem2():
+    """ 
+    Problem 2: Find the sum of the even-valued terms in the Fibonacci
+        sequence whose values do not exceed four million
+    """
+    #Variable Declaration
+    max_val = 4000000
+    total = 2   # set to 2 to account for the first even term of sequence
+    num1 = 1    # first term of sequence
+    num2 = 2    # second term of sequence
+    temp = 0
+    
+    # Loop until the stored value is greater than the specified max_val
+    while num2 < max_val:
+        temp = num1 + num2
+        # check to see if the following value is even
+        if temp % 2 == 0:
+            total = temp + total
+        num1 = num2
+        num2 = temp
+    
+    logger.info("Problem 2 Solution: ")
+    logger.info("The sum of even-valued terms in Fibonacci sequence is %d" % total)
+    
+    return
+
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -99,7 +125,7 @@ def main():
 
     # Problem Functions --------------------------------------------------------
     problem1()
-
+    problem2()
     
     logger.info('Program Completed')
     logger.info('--------------------------------------\n')

@@ -5,3 +5,15 @@
 2015-06-11 15:32:45,546 [ main:105 ] INFO  Program Completed
 2015-06-11 15:32:45,546 [ main:106 ] INFO  --------------------------------------
 
+2015-06-15 11:34:11,341 [ main:124 ] INFO  Program Started
+2015-06-15 11:34:11,342 [ problem1:66 ] DEBUG  variables declared for problem 1
+2015-06-15 11:34:11,342 [ problem1:75 ] DEBUG  list of values have been stored
+2015-06-15 11:34:11,342 [ problem1:80 ] DEBUG  summation complete
+2015-06-15 11:34:11,342 [ problem1:82 ] INFO  Problem 1 Solution: 
+2015-06-15 11:34:11,342 [ problem1:84 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
+
+2015-06-15 11:34:11,342 [ problem2:109 ] INFO  Problem 2 Solution: 
+2015-06-15 11:34:11,344 [ problem2:110 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
+2015-06-15 11:34:11,344 [ main:130 ] INFO  Program Completed
+2015-06-15 11:34:11,344 [ main:131 ] INFO  --------------------------------------
+
