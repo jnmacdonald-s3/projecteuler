@@ -1,19 +1,17 @@
-2015-06-11 15:32:45,543 [ main:98 ] INFO  Program Started
-2015-06-11 15:32:45,545 [ problem1:66 ] DEBUG  variables declared for problem 1
-2015-06-11 15:32:45,545 [ problem1:74 ] DEBUG  list of values have been stored
-2015-06-11 15:32:45,545 [ problem1:79 ] DEBUG  summation complete
-2015-06-11 15:32:45,546 [ main:105 ] INFO  Program Completed
-2015-06-11 15:32:45,546 [ main:106 ] INFO  --------------------------------------
+2015-06-18 11:05:06,434 [ main:166 ] INFO  Program Started
 
-2015-06-15 11:34:11,341 [ main:124 ] INFO  Program Started
-2015-06-15 11:34:11,342 [ problem1:66 ] DEBUG  variables declared for problem 1
-2015-06-15 11:34:11,342 [ problem1:75 ] DEBUG  list of values have been stored
-2015-06-15 11:34:11,342 [ problem1:80 ] DEBUG  summation complete
-2015-06-15 11:34:11,342 [ problem1:82 ] INFO  Problem 1 Solution: 
-2015-06-15 11:34:11,342 [ problem1:84 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
+2015-06-18 11:05:06,434 [ problem1:67 ] DEBUG  variables declared for problem 1
+2015-06-18 11:05:06,434 [ problem1:76 ] DEBUG  list of values have been stored
+2015-06-18 11:05:06,434 [ problem1:81 ] DEBUG  summation complete
+2015-06-18 11:05:06,434 [ problem1:83 ] INFO  Problem 1 Solution: 
+2015-06-18 11:05:06,434 [ problem1:85 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
 
-2015-06-15 11:34:11,342 [ problem2:109 ] INFO  Problem 2 Solution: 
-2015-06-15 11:34:11,344 [ problem2:110 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
-2015-06-15 11:34:11,344 [ main:130 ] INFO  Program Completed
-2015-06-15 11:34:11,344 [ main:131 ] INFO  --------------------------------------
+2015-06-18 11:05:06,434 [ problem2:110 ] INFO  Problem 2 Solution: 
+2015-06-18 11:05:06,434 [ problem2:111 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
+
+2015-06-18 11:05:10,480 [ problem5:151 ] INFO  Problem 5 Solution: 
+2015-06-18 11:05:10,482 [ problem5:153 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
+
+2015-06-18 11:05:10,482 [ main:173 ] INFO  Program Completed
+2015-06-18 11:05:10,482 [ main:174 ] INFO  --------------------------------------
 

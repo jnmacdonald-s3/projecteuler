@@ -14,6 +14,7 @@ Project Euler - An interactive project with the purposes of learning:
 # ******************************************************************************
 
 import logging
+import math
 
 # ******************************************************************************
 # Globals
@@ -25,7 +26,7 @@ logger = logging.getLogger('projecteuler')
 logger.setLevel(logging.DEBUG)
 
 # create file handler & console handler setting them to appropiate levels
-file_h = logging.FileHandler('projecteuler.log')
+file_h = logging.FileHandler('projecteuler.log', mode='w')
 file_h.setLevel(logging.DEBUG)
 
 console_h = logging.StreamHandler()
@@ -107,10 +108,51 @@ def problem2():
         num2 = temp
     
     logger.info("Problem 2 Solution: ")
-    logger.info("The sum of even-valued terms in Fibonacci sequence is %d" % total)
+    logger.info("The sum of even-valued terms in Fibonacci sequence is %d\n" % total)
     
     return
 
+def problem5():
+    """
+    Problem 5: Find the smallest number divisible by all values from 1 to 20
+    """
+    # all values < 10 are inclusive multiples in values 11 to 20
+    values = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    smallestPrimeNum = 0
+    
+    # find smallest prime number of the list
+    for number in values:
+        n = 2
+        temp = int(math.ceil(math.sqrt(11)))
+        __isprime = True
+        while n <= temp:
+            if number % n == 0:
+                #not prime
+                __isprime = False
+            n += 1
+        if __isprime:
+            smallestPrimeNum = number
+            break
+    
+    # increment smallest prime number until number is divisble by all values
+    __doneFlag = False
+    myNum = 0
+    while not __doneFlag:
+        myNum += smallestPrimeNum
+        __doneFlag = True
+        # check if divisible by all values
+        for number in values:
+            if myNum % number == 0:
+                continue
+            else:
+                __doneFlag = False
+                break
+                
+    logger.info("Problem 5 Solution: ")
+    logger.info("The smallest number divisible by values 1 to 20 is %d\n"
+                % myNum)
+    
+    return
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -121,11 +163,12 @@ def main():
     solution to stdout as well as 'projecteuler.log'
     """
     
-    logger.info('Program Started')
+    logger.info('Program Started\n')
 
     # Problem Functions --------------------------------------------------------
     problem1()
     problem2()
+    problem5()
     
     logger.info('Program Completed')
     logger.info('--------------------------------------\n')
