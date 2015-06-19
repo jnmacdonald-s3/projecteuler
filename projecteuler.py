@@ -171,6 +171,30 @@ def problem5():
                 % myNum)
     
     return
+
+def problem7():
+    """
+    Problem 7: Find the 10,001st prime number
+    """
+    __doneFlag = False
+    counter = 4
+    testnum = 11
+    while not __doneFlag:
+        temp = int(math.ceil(math.sqrt(testnum)))
+        for value in range(2, temp):
+            __isPrime = True
+            if testnum % value == 0:
+                #not prime
+                __isPrime = False
+                break
+        if __isPrime:
+            counter += 1      
+        if counter == 10001:
+            __doneFlag = True
+        testnum += 1
+    print testnum
+    
+    return
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -187,6 +211,7 @@ def main():
     problem1()
     problem2()
     problem5()
+    problem7()
     
     logger.info('Program Completed')
     logger.info('--------------------------------------\n')
