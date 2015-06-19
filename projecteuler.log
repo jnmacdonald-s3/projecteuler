@@ -1,17 +1,17 @@
-2015-06-18 11:05:06,434 [ main:166 ] INFO  Program Started
+2015-06-18 17:02:42,217 [ main:184 ] INFO  Program Started
 
-2015-06-18 11:05:06,434 [ problem1:67 ] DEBUG  variables declared for problem 1
-2015-06-18 11:05:06,434 [ problem1:76 ] DEBUG  list of values have been stored
-2015-06-18 11:05:06,434 [ problem1:81 ] DEBUG  summation complete
-2015-06-18 11:05:06,434 [ problem1:83 ] INFO  Problem 1 Solution: 
-2015-06-18 11:05:06,434 [ problem1:85 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
+2015-06-18 17:02:42,236 [ problem1:85 ] DEBUG  variables declared for problem 1
+2015-06-18 17:02:42,236 [ problem1:94 ] DEBUG  list of values have been stored
+2015-06-18 17:02:42,236 [ problem1:99 ] DEBUG  summation complete
+2015-06-18 17:02:42,236 [ problem1:101 ] INFO  Problem 1 Solution: 
+2015-06-18 17:02:42,236 [ problem1:103 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
 
-2015-06-18 11:05:06,434 [ problem2:110 ] INFO  Problem 2 Solution: 
-2015-06-18 11:05:06,434 [ problem2:111 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
+2015-06-18 17:02:42,236 [ problem2:128 ] INFO  Problem 2 Solution: 
+2015-06-18 17:02:42,236 [ problem2:129 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
 
-2015-06-18 11:05:10,480 [ problem5:151 ] INFO  Problem 5 Solution: 
-2015-06-18 11:05:10,482 [ problem5:153 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
+2015-06-18 17:02:46,276 [ problem5:169 ] INFO  Problem 5 Solution: 
+2015-06-18 17:02:46,286 [ problem5:171 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
 
-2015-06-18 11:05:10,482 [ main:173 ] INFO  Program Completed
-2015-06-18 11:05:10,482 [ main:174 ] INFO  --------------------------------------
+2015-06-18 17:02:46,286 [ main:191 ] INFO  Program Completed
+2015-06-18 17:02:46,286 [ main:192 ] INFO  --------------------------------------
 

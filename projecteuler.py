@@ -15,43 +15,61 @@ Project Euler - An interactive project with the purposes of learning:
 
 import logging
 import math
+import argparse
 
 # ******************************************************************************
 # Globals
 # ******************************************************************************
 
-# Logging Configuration
-global logger
-logger = logging.getLogger('projecteuler')
-logger.setLevel(logging.DEBUG)
-
-# create file handler & console handler setting them to appropiate levels
-file_h = logging.FileHandler('projecteuler.log', mode='w')
-file_h.setLevel(logging.DEBUG)
-
-console_h = logging.StreamHandler()
-console_h.setLevel(logging.INFO)
-
-# create formatters for each handler
-con_format = logging.Formatter(
-    '[ %(funcName)s:%(lineno)d ] %(levelname)s  %(message)s'
-    )
-log_format = logging.Formatter(
-    '%(asctime)s [ %(funcName)s:%(lineno)d ] %(levelname)s  %(message)s'
-    )
-
-# set formatters to appropriate
-file_h.setFormatter(log_format)
-console_h.setFormatter(con_format)
-
-# add handlers to logger
-logger.addHandler(file_h)
-logger.addHandler(console_h)
-    
 
 # ******************************************************************************
 # Functions
 # ******************************************************************************
+
+def get_arguments():
+    global logger
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", "--verbose", action="store_true", help="Enables Verbose Logging")
+    __args = parser.parse_args()
+    if __args.verbose:
+        print("Setting Log Level to DEBUG")
+        logger = logging.getLogger('projecteuler')
+        logger.setLevel(logging.DEBUG)
+        # create file handler & console handler setting them to appropiate levels
+        file_h = logging.FileHandler('projecteuler.log', mode='w')
+        file_h.setLevel(logging.DEBUG)
+
+        console_h = logging.StreamHandler()
+        console_h.setLevel(logging.DEBUG)
+
+    else:
+        print("Setting Log Level to INFO")
+        logger = logging.getLogger('projecteuler')
+        logger.setLevel(logging.INFO)
+        # create file handler & console handler setting them to appropiate levels
+        file_h = logging.FileHandler('projecteuler.log', mode='w')
+        file_h.setLevel(logging.INFO)
+
+        console_h = logging.StreamHandler()
+        console_h.setLevel(logging.INFO)
+		
+    # create formatters for each handler
+    con_format = logging.Formatter(
+        '[ %(funcName)s:%(lineno)d ] %(levelname)s  %(message)s'
+        )
+    log_format = logging.Formatter(
+        '%(asctime)s [ %(funcName)s:%(lineno)d ] %(levelname)s  %(message)s'
+        )
+    # set formatters to appropriate
+    file_h.setFormatter(log_format)
+    console_h.setFormatter(con_format)
+
+    # add handlers to logger
+    logger.addHandler(file_h)
+    logger.addHandler(console_h)
+    
+    return __args
+
 
 def problem1():
     """ 
@@ -162,7 +180,7 @@ def main():
     Main will run all problem functions and sequentially returning each problem
     solution to stdout as well as 'projecteuler.log'
     """
-    
+    __args = get_arguments()
     logger.info('Program Started\n')
 
     # Problem Functions --------------------------------------------------------
