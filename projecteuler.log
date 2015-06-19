@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-2015-06-18 17:02:42,217 [ main:184 ] INFO  Program Started
+2015-06-19 10:04:40,319 [ main:211 ] INFO  Program Started
 
-2015-06-18 17:02:42,236 [ problem1:85 ] DEBUG  variables declared for problem 1
-2015-06-18 17:02:42,236 [ problem1:94 ] DEBUG  list of values have been stored
-2015-06-18 17:02:42,236 [ problem1:99 ] DEBUG  summation complete
-2015-06-18 17:02:42,236 [ problem1:101 ] INFO  Problem 1 Solution: 
-2015-06-18 17:02:42,236 [ problem1:103 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
+2015-06-19 10:04:40,319 [ problem1:85 ] DEBUG  variables declared for problem 1
+2015-06-19 10:04:40,321 [ problem1:94 ] DEBUG  list of values have been stored
+2015-06-19 10:04:40,321 [ problem1:99 ] DEBUG  summation complete
+2015-06-19 10:04:40,321 [ problem1:101 ] INFO  Problem 1 Solution: 
+2015-06-19 10:04:40,322 [ problem1:103 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
 
-2015-06-18 17:02:42,236 [ problem2:128 ] INFO  Problem 2 Solution: 
-2015-06-18 17:02:42,236 [ problem2:129 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
+2015-06-19 10:04:40,322 [ problem2:128 ] INFO  Problem 2 Solution: 
+2015-06-19 10:04:40,322 [ problem2:129 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
 
-2015-06-18 17:02:46,276 [ problem5:169 ] INFO  Problem 5 Solution: 
-2015-06-18 17:02:46,286 [ problem5:171 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
+2015-06-19 10:04:44,388 [ problem5:169 ] INFO  Problem 5 Solution: 
+2015-06-19 10:04:44,388 [ problem5:171 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
 
-2015-06-18 17:02:46,286 [ main:191 ] INFO  Program Completed
-2015-06-18 17:02:46,286 [ main:192 ] INFO  --------------------------------------
-=======
-2015-06-18 16:00:42,674 [ main:190 ] INFO  Program Started
+2015-06-19 10:04:44,733 [ problem7:197 ] INFO  Problem 7 Solution:
+2015-06-19 10:04:44,733 [ problem7:198 ] INFO  The 10,001st prime number is 104743
 
-2015-06-18 16:00:42,674 [ problem1:67 ] DEBUG  variables declared for problem 1
-2015-06-18 16:00:42,674 [ problem1:76 ] DEBUG  list of values have been stored
-2015-06-18 16:00:42,674 [ problem1:81 ] DEBUG  summation complete
-2015-06-18 16:00:42,674 [ problem1:83 ] INFO  Problem 1 Solution: 
-2015-06-18 16:00:42,676 [ problem1:85 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
-
-2015-06-18 16:00:42,676 [ problem2:110 ] INFO  Problem 2 Solution: 
-2015-06-18 16:00:42,676 [ problem2:111 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
-
-2015-06-18 16:00:46,717 [ problem5:151 ] INFO  Problem 5 Solution: 
-2015-06-18 16:00:46,719 [ problem5:153 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
-
-2015-06-18 16:00:47,059 [ main:198 ] INFO  Program Completed
-2015-06-18 16:00:47,059 [ main:199 ] INFO  --------------------------------------
->>>>>>> temp
+2015-06-19 10:04:44,733 [ main:219 ] INFO  Program Completed
+2015-06-19 10:04:44,733 [ main:220 ] INFO  --------------------------------------
 

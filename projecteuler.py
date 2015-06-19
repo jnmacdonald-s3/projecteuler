@@ -45,10 +45,10 @@ def get_arguments():
     else:
         print("Setting Log Level to INFO")
         logger = logging.getLogger('projecteuler')
-        logger.setLevel(logging.INFO)
+        logger.setLevel(logging.DEBUG)
         # create file handler & console handler setting them to appropiate levels
         file_h = logging.FileHandler('projecteuler.log', mode='w')
-        file_h.setLevel(logging.INFO)
+        file_h.setLevel(logging.DEBUG)
 
         console_h = logging.StreamHandler()
         console_h.setLevel(logging.INFO)
@@ -177,11 +177,12 @@ def problem7():
     Problem 7: Find the 10,001st prime number
     """
     __doneFlag = False
-    counter = 4
-    testnum = 11
+    counter = 6 # start from 13 which is the 6th prime number
+    testnum = 14 # next value after 13
+    
     while not __doneFlag:
         temp = int(math.ceil(math.sqrt(testnum)))
-        for value in range(2, temp):
+        for value in range(2, temp+1):
             __isPrime = True
             if testnum % value == 0:
                 #not prime
@@ -191,8 +192,11 @@ def problem7():
             counter += 1      
         if counter == 10001:
             __doneFlag = True
-        testnum += 1
-    print testnum
+        if __doneFlag == False:
+            testnum += 1
+            
+    logger.info("Problem 7 Solution:")
+    logger.info("The 10,001st prime number is %d\n" % testnum)
     
     return
 # ******************************************************************************
