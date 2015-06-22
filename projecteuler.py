@@ -199,6 +199,39 @@ def problem7():
     logger.info("The 10,001st prime number is %d\n" % testnum)
     
     return
+
+def problem14():
+    """
+    Problem 8: Find the starting value (under one million) of which produces
+        the longest Collatz sequence.
+    """
+    testCeil = 1000000
+    countMax = 0
+    numStored = 0
+    
+    # loop through values under 1,000,000
+    for initValue in range(1,testCeil):
+        num = initValue
+        count = 0
+        # loop over value until it reaches 1
+        while num != 1:
+            if num % 2 == 0:
+                # number is even
+                num = num / 2
+            else:
+                # number is odd
+                num = (3 * num) + 1
+            count += 1
+        # check if greatest count value and store these value
+        if count > countMax:
+            countMax = count
+            numStored = initValue
+    
+    logger.info("Problem 14 Solution:")
+    logger.info("The initial value of %d has the longest Collatz sequence " 
+                % (numStored) + "at %d terms\n" % (countMax))
+        
+    return
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -216,6 +249,7 @@ def main():
     problem2()
     problem5()
     problem7()
+    problem14()
     
     logger.info('Program Completed')
     logger.info('--------------------------------------\n')

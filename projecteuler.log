@@ -1,20 +1,23 @@
-2015-06-19 10:04:40,319 [ main:211 ] INFO  Program Started
+2015-06-22 15:13:04,206 [ main:245 ] INFO  Program Started
 
-2015-06-19 10:04:40,319 [ problem1:85 ] DEBUG  variables declared for problem 1
-2015-06-19 10:04:40,321 [ problem1:94 ] DEBUG  list of values have been stored
-2015-06-19 10:04:40,321 [ problem1:99 ] DEBUG  summation complete
-2015-06-19 10:04:40,321 [ problem1:101 ] INFO  Problem 1 Solution: 
-2015-06-19 10:04:40,322 [ problem1:103 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
+2015-06-22 15:13:04,207 [ problem1:85 ] DEBUG  variables declared for problem 1
+2015-06-22 15:13:04,207 [ problem1:94 ] DEBUG  list of values have been stored
+2015-06-22 15:13:04,207 [ problem1:99 ] DEBUG  summation complete
+2015-06-22 15:13:04,207 [ problem1:101 ] INFO  Problem 1 Solution: 
+2015-06-22 15:13:04,207 [ problem1:103 ] INFO  The sum of terms under 1000 which are multiples of 3 and 5 is 233168 
 
-2015-06-19 10:04:40,322 [ problem2:128 ] INFO  Problem 2 Solution: 
-2015-06-19 10:04:40,322 [ problem2:129 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
+2015-06-22 15:13:04,207 [ problem2:128 ] INFO  Problem 2 Solution: 
+2015-06-22 15:13:04,207 [ problem2:129 ] INFO  The sum of even-valued terms in Fibonacci sequence is 4613732
 
-2015-06-19 10:04:44,388 [ problem5:169 ] INFO  Problem 5 Solution: 
-2015-06-19 10:04:44,388 [ problem5:171 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
+2015-06-22 15:13:08,348 [ problem5:169 ] INFO  Problem 5 Solution: 
+2015-06-22 15:13:08,348 [ problem5:171 ] INFO  The smallest number divisible by values 1 to 20 is 232792560
 
-2015-06-19 10:04:44,733 [ problem7:197 ] INFO  Problem 7 Solution:
-2015-06-19 10:04:44,733 [ problem7:198 ] INFO  The 10,001st prime number is 104743
+2015-06-22 15:13:08,703 [ problem7:198 ] INFO  Problem 7 Solution:
+2015-06-22 15:13:08,704 [ problem7:199 ] INFO  The 10,001st prime number is 104743
 
-2015-06-19 10:04:44,733 [ main:219 ] INFO  Program Completed
-2015-06-19 10:04:44,733 [ main:220 ] INFO  --------------------------------------
+2015-06-22 15:13:23,210 [ problem14:230 ] INFO  Problem 14 Solution:
+2015-06-22 15:13:23,211 [ problem14:232 ] INFO  The initial value of 837799 has the longest Collatz sequence at 524 terms
+
+2015-06-22 15:13:23,211 [ main:254 ] INFO  Program Completed
+2015-06-22 15:13:23,211 [ main:255 ] INFO  --------------------------------------
 
