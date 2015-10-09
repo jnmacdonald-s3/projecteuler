@@ -1,0 +1,14 @@
+projectEuler.py
+
+NOTE: This README is a working draft
+
+Running the program with the verbose option is reccommended
+e.g.:  ./projectEuler.py -v
+
+This is because problem #10 uses a brute force isPrime function
+which is slow. The verbose option shows a percentage complete
+update during the problem so you know your computer didn't crash
+
+
+
+Jim 

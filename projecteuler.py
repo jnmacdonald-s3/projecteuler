@@ -15,7 +15,7 @@ Project Euler - An interactive project with the purposes of learning:
 # ******************************************************************************
 
 import logging
-import math
+from math import *
 import argparse
 
 # ******************************************************************************
@@ -126,6 +126,48 @@ def problem2():
     logger.info("Sum of even Finonacci terms less than 4e6 = %i\n"%runningSum)
     return
 
+def problem10():
+    """
+    Problem 10: Find the sum of all primes below 2e6
+    """
+    
+    # Initialize
+    N = 2e6      # Problem's upper bound
+    runningSum = 3 # 1,2 are prime, we are starting at i=3
+    primeCount = 2
+    n = 3
+
+    logger.debug("Brute Force 'isPrime' loop start")
+
+    # Brute force it
+    while n <= N:
+        bound = int( ceil( sqrt(n)+1 ) )  # All you need to check
+        for ii in range(2,bound+1):
+
+	    if n%ii == 0:
+            # Then it is not prime
+                break
+ 
+        if ii == bound:
+            runningSum += n
+            primeCount += 1        
+
+        if n % (N/10.) == 0:
+        # Status Update
+            percentComplete = n/float(N) * 100
+            logger.debug("%i%% complete, %i primes found"
+                         %(percentComplete,primeCount)
+                        )
+
+        n += 1
+
+    logger.debug("Loop completed")
+    logger.debug("%i primes found"%primeCount)
+    logger.info("Problem #10 Solution:")
+    logger.info("The sum of primes <= %i is %i"%(N,runningSum))
+
+    return
+  
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -147,7 +189,8 @@ def main():
 
     problem1()
     problem2()
-    
+    problem10() 
+   
     # use logging to printout notification that program has terminated
     logger.info("------------------------------")
     logger.info("  Program end")    
