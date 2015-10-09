@@ -1,0 +1,13 @@
+2015-10-09 12:19:54,906 [ get_arguments:67 ] INFO: Logging level set to INFO
+2015-10-09 12:19:54,908 [ main:142 ] INFO: ------------------------------
+2015-10-09 12:19:54,908 [ main:143 ] INFO:   Program start
+2015-10-09 12:19:54,909 [ main:144 ] INFO: ------------------------------
+2015-10-09 12:19:54,909 [ problem1:90 ] INFO: Problem #1 Solution:
+2015-10-09 12:19:54,910 [ problem1:91 ] INFO: Sum of numbers on (0,1000) divisible by 3,5 is 33165
+
+2015-10-09 12:19:54,911 [ problem2:125 ] INFO: Problem #2 Solution:
+2015-10-09 12:19:54,911 [ problem2:126 ] INFO: Sum of even Finonacci terms less than 4e6 = 4613732
+
+2015-10-09 12:19:54,913 [ main:152 ] INFO: ------------------------------
+2015-10-09 12:19:54,914 [ main:153 ] INFO:   Program end
+2015-10-09 12:19:54,914 [ main:154 ] INFO: ------------------------------
