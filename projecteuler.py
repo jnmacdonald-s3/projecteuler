@@ -208,7 +208,10 @@ def problem35():
         for i in reversed(xrange(6)):
             num[i] = p%10
             p /= 10
-
+    x1 = 7 in primeList
+    x2 = 4 in primeList
+    print x1
+    print x2
 
 
 # ******************************************************************************
@@ -230,10 +233,10 @@ def main():
 
     # Problem Functions --------------------------------------------------------
 
-    problem1()
-    problem2()
+#    problem1()
+#    problem2()
     problem10() 
-#    problem35()    
+    problem35()    
   
     # use logging to printout notification that program has terminated
     logger.info("------------------------------")

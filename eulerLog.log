@@ -1,24 +1,13 @@
-2015-10-12 09:52:09,694 [ get_arguments:65 ] INFO: Level set to DEBUG
-2015-10-12 09:52:09,695 [ main:227 ] INFO: ------------------------------
-2015-10-12 09:52:09,696 [ main:228 ] INFO:   Program start
-2015-10-12 09:52:09,696 [ main:229 ] INFO: ------------------------------
-2015-10-12 09:52:09,697 [ problem10:149 ] DEBUG: No file found. Calculations beginning
-2015-10-12 09:52:09,697 [ problem10:156 ] DEBUG: Brute Force 'isPrime' loop start
-2015-10-12 09:52:10,560 [ problem10:175 ] DEBUG: 10% complete, 17985 primes found
-2015-10-12 09:52:12,123 [ problem10:175 ] DEBUG: 20% complete, 33861 primes found
-2015-10-12 09:52:14,175 [ problem10:175 ] DEBUG: 30% complete, 49099 primes found
-2015-10-12 09:52:16,626 [ problem10:175 ] DEBUG: 40% complete, 63952 primes found
-2015-10-12 09:52:19,420 [ problem10:175 ] DEBUG: 50% complete, 78499 primes found
-2015-10-12 09:52:22,527 [ problem10:175 ] DEBUG: 60% complete, 92939 primes found
-2015-10-12 09:52:25,903 [ problem10:175 ] DEBUG: 70% complete, 107127 primes found
-2015-10-12 09:52:29,525 [ problem10:175 ] DEBUG: 80% complete, 121128 primes found
-2015-10-12 09:52:33,399 [ problem10:175 ] DEBUG: 90% complete, 135073 primes found
-2015-10-12 09:52:37,500 [ problem10:175 ] DEBUG: 100% complete, 148934 primes found
-2015-10-12 09:52:37,768 [ problem10:180 ] DEBUG: Loop completed
-2015-10-12 09:52:37,772 [ problem10:185 ] DEBUG: 148934 primes found
-2015-10-12 09:52:37,773 [ problem10:186 ] INFO: Problem #10 Solution:
-2015-10-12 09:52:37,774 [ problem10:187 ] INFO: The sum of primes <= 2000000 is 142913828923
+2015-10-12 10:00:49,828 [ get_arguments:65 ] INFO: Level set to DEBUG
+2015-10-12 10:00:49,831 [ main:230 ] INFO: ------------------------------
+2015-10-12 10:00:49,833 [ main:231 ] INFO:   Program start
+2015-10-12 10:00:49,834 [ main:232 ] INFO: ------------------------------
+2015-10-12 10:00:49,835 [ problem10:143 ] DEBUG: Prime data file found
+2015-10-12 10:00:49,835 [ problem10:144 ] DEBUG: Reading in data from file
+2015-10-12 10:00:50,426 [ problem10:185 ] DEBUG: 148934 primes found
+2015-10-12 10:00:50,430 [ problem10:186 ] INFO: Problem #10 Solution:
+2015-10-12 10:00:50,430 [ problem10:187 ] INFO: The sum of primes <= 2000000 is 142913828923
 
-2015-10-12 09:52:37,775 [ main:239 ] INFO: ------------------------------
-2015-10-12 09:52:37,775 [ main:240 ] INFO:   Program end
-2015-10-12 09:52:37,776 [ main:241 ] INFO: ------------------------------
+2015-10-12 10:00:50,435 [ main:242 ] INFO: ------------------------------
+2015-10-12 10:00:50,436 [ main:243 ] INFO:   Program end
+2015-10-12 10:00:50,436 [ main:244 ] INFO: ------------------------------
