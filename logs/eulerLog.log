@@ -1,0 +1,33 @@
+2015-10-12 16:15:38,558 [ get_arguments:65 ] INFO: Level set to DEBUG
+2015-10-12 16:15:38,559 [ main:306 ] INFO: ------------------------------
+2015-10-12 16:15:38,560 [ main:307 ] INFO:   Program start
+2015-10-12 16:15:38,561 [ main:308 ] INFO: ------------------------------
+
+2015-10-12 16:15:38,561 [ problem1:82 ] DEBUG: Problem #1 iterations started
+2015-10-12 16:15:38,562 [ problem1:88 ] DEBUG: Iterations complete
+2015-10-12 16:15:38,562 [ problem1:93 ] INFO: Problem #1 Solution:
+2015-10-12 16:15:38,563 [ problem1:94 ] INFO: Sum of numbers on (0,1000) divisible by 3,5 is 33165
+
+2015-10-12 16:15:38,564 [ problem2:111 ] DEBUG: Variables initiated, begging loop
+2015-10-12 16:15:38,564 [ problem2:126 ] DEBUG: Loop terminated at value c=5702887
+2015-10-12 16:15:38,565 [ problem2:127 ] DEBUG: Last used value was c=3524578
+2015-10-12 16:15:38,565 [ problem2:128 ] INFO: Problem #2 Solution:
+2015-10-12 16:15:38,566 [ problem2:129 ] INFO: Sum of even Finonacci terms less than 4e6 = 4613732
+
+2015-10-12 16:15:38,567 [ problem10:143 ] DEBUG: Prime data file found
+2015-10-12 16:15:38,568 [ problem10:144 ] DEBUG: Reading in data from file
+2015-10-12 16:15:39,039 [ problem10:185 ] DEBUG: 148934 primes found
+2015-10-12 16:15:39,042 [ problem10:186 ] INFO: Problem #10 Solution:
+2015-10-12 16:15:39,042 [ problem10:187 ] INFO: The sum of primes <= 2000000 is 142913828923
+
+2015-10-12 16:15:39,044 [ problem35:203 ] DEBUG: Circular Prime Data file found
+2015-10-12 16:15:39,044 [ problem35:204 ] DEBUG: Reading in data from file
+2015-10-12 16:15:39,046 [ problem35:246 ] INFO: Problem #35 Solution:
+2015-10-12 16:15:39,046 [ problem35:247 ] INFO: There are 56 circular primes under one million
+
+2015-10-12 16:15:39,047 [ sqrtEst:288 ] INFO: After 35 iterations:
+2015-10-12 16:15:39,048 [ sqrtEst:289 ] INFO: The sqrt of 20.000000 is approx = 4.47213595
+
+2015-10-12 16:15:39,049 [ main:319 ] INFO: ------------------------------
+2015-10-12 16:15:39,049 [ main:320 ] INFO:   Program end
+2015-10-12 16:15:39,050 [ main:321 ] INFO: ------------------------------

@@ -43,7 +43,7 @@ def get_arguments():
 
     # Logger set up
     logger = logging.getLogger("eulerLog")
-    fh = logging.FileHandler("eulerLog.log",mode="w")
+    fh = logging.FileHandler("logs/eulerLog.log",mode="w")
     ch = logging.StreamHandler()
 
     logFileFormat = logging.Formatter(
@@ -139,10 +139,10 @@ def problem10():
     N = 2e6      # Problem's upper bound
                  #   I need to later integrate it into primes.data
 
-    if os.path.isfile("primes.dat"):
+    if os.path.isfile("data/primes.dat"):
         logger.debug("Prime data file found")
         logger.debug("Reading in data from file")
-        primeList = numpy.loadtxt("primes.dat",dtype="int")
+        primeList = numpy.loadtxt("data/primes.dat",dtype="int")
         primeCount = primeList.size
 
     else:
@@ -176,7 +176,7 @@ def problem10():
                             )
             n += 1
 
-        numpy.savetxt("primes.dat",primeList,fmt="%i")
+        numpy.savetxt("data/primes.dat",primeList,fmt="%i")
         logger.debug("Loop completed")
 
     # Now calculate the sum of the primes
@@ -195,24 +195,100 @@ def problem35():
 
     # Initialize
     global primeList
-    num = [None]* 6  # Since it's < 1e6 we know there are 5 digits max
-    upperBound = 100
-   
-    # Main loop
-    for p in primeList:
-        # Check stopping condition
-        if p >= upperBound:
+    upperBound = 1e6
+    p_new = 0
+    circPrimeList = []
+
+    if os.path.isfile("data/circularPrimes.dat"):
+        logger.debug("Circular Prime Data file found")
+        logger.debug("Reading in data from file")
+        circPrimeList = numpy.loadtxt("data/circularPrimes.dat",dtype="int")
+        numCircPrime = circPrimeList.size
+  
+    else:
+        logger.debug("No data file found, calculations beginning")
+        # Main loop
+        for p in primeList:
+            # Check stopping condition
+            if p >= upperBound:
+                break
+
+            # Break up p into a 6 digit number, starting with the smallest
+            p_tmp = p
+            numDigits = len(str(p_tmp))
+            num = [None]*numDigits
+            for i in reversed(xrange(numDigits)):
+                num[i] = p_tmp%10
+                p_tmp /= 10
+
+            # Now check all cyclic permutations of this number for primality
+            circPrime = True  # default switch value
+            for x in range(0,numDigits):
+                for i in xrange(0,numDigits):
+                    ii = (x-i) % numDigits  # modulate it across the digits 
+                    p_new += num[i]*10**ii
+            
+                if p_new not in primeList:
+                    p_new = 0
+                    circPrime = False
+                    break 
+
+                p_new = 0
+        
+            if circPrime:
+                circPrimeList.append(p)
+
+        numCircPrime = len(circPrimeList)
+
+        logger.debug("Saving circular primes to a file")
+        numpy.savetxt("data/circularPrimes.dat",circPrimeList,fmt="%i")
+
+    logger.info("Problem #35 Solution:")
+    logger.info("There are %i circular primes under one million\n"%numCircPrime)
+
+    return
+
+def sqrtEst(x=20):
+    """
+    Calculating the square root of a number using bisection method
+    """
+    # Initialize
+    n = 0
+    a = 0.0
+    b = float(x)
+    TOL = 1e-8
+    N = 1e4
+    NaN = numpy.NaN
+    fc = NaN
+
+    if x <= 0:
+        logger.error("Error: choose x > 0")
+        return
+
+    # Begin the bisection method
+    while(1):
+
+        fc_prev = fc
+        n += 1
+        c = (b+a) / 2.0
+
+        fa = a*a - x
+        fb = b*b - x
+        fc = c*c - x
+
+        tol = abs(fc-fc_prev)
+        if tol < TOL or n >= N:
             break
 
-        # Break up p into a 6 digit number, starting with the smallest
-        for i in reversed(xrange(6)):
-            num[i] = p%10
-            p /= 10
-    x1 = 7 in primeList
-    x2 = 4 in primeList
-    print x1
-    print x2
+        if fa*fc > 0:
+            a = c
+        else:
+            b = c
 
+    logger.info("After %i iterations:"%n)
+    logger.info("The sqrt of %f is approx = %.8f\n"%(x,c))
+
+    return
 
 # ******************************************************************************
 # Main
@@ -229,15 +305,16 @@ def main():
 
     logger.info("------------------------------")
     logger.info("  Program start")
-    logger.info("------------------------------")
+    logger.info("------------------------------\n")
 
     # Problem Functions --------------------------------------------------------
 
-#    problem1()
-#    problem2()
+    problem1()
+    problem2()
     problem10() 
     problem35()    
-  
+    sqrtEst()
+
     # use logging to printout notification that program has terminated
     logger.info("------------------------------")
     logger.info("  Program end")    
