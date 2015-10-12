@@ -17,11 +17,14 @@ Project Euler - An interactive project with the purposes of learning:
 import logging
 from math import *
 import argparse
+import numpy
+import os.path
 
 # ******************************************************************************
 # Globals
 # ******************************************************************************
 
+primeList = []  # Modified in problem10()
 
 # ******************************************************************************
 # Functions
@@ -130,44 +133,84 @@ def problem10():
     """
     Problem 10: Find the sum of all primes below 2e6
     """
-    
+    global primeList
+
     # Initialize
     N = 2e6      # Problem's upper bound
-    runningSum = 3 # 1,2 are prime, we are starting at i=3
-    primeCount = 2
-    n = 3
+                 #   I need to later integrate it into primes.data
 
-    logger.debug("Brute Force 'isPrime' loop start")
+    if os.path.isfile("primes.dat"):
+        logger.debug("Prime data file found")
+        logger.debug("Reading in data from file")
+        primeList = numpy.loadtxt("primes.dat",dtype="int")
+        primeCount = primeList.size
 
-    # Brute force it
-    while n <= N:
-        bound = int( ceil( sqrt(n)+1 ) )  # All you need to check
-        for ii in range(2,bound+1):
+    else:
+        logger.debug("No file found. Calculations beginning")
+        N = 2e6
+        primeCount = 2  # Accounting for 1 and 2 already
+        n = 3
+        primeList.append(1)
+        primeList.append(2)
+        
+        logger.debug("Brute Force 'isPrime' loop start")
 
-	    if n%ii == 0:
-            # Then it is not prime
-                break
+        # Brute force it
+        while n <= N:
+            bound = int( ceil( sqrt(n)+1 ) )  # All you need to check
+            for ii in range(2,bound+1):
+
+    	        if n%ii == 0:
+                # Then it is not prime
+                    break
  
-        if ii == bound:
-            runningSum += n
-            primeCount += 1        
+            if ii == bound:
+                primeList.append(n)
+                primeCount += 1
 
-        if n % (N/10.) == 0:
-        # Status Update
-            percentComplete = n/float(N) * 100
-            logger.debug("%i%% complete, %i primes found"
-                         %(percentComplete,primeCount)
-                        )
+            if n % (N/10.) == 0:
+            # Status Update
+                percentComplete = n/float(N) * 100
+                logger.debug("%i%% complete, %i primes found"
+                             %(percentComplete,primeCount)
+                            )
+            n += 1
 
-        n += 1
+        numpy.savetxt("primes.dat",primeList,fmt="%i")
+        logger.debug("Loop completed")
 
-    logger.debug("Loop completed")
+    # Now calculate the sum of the primes
+    primesSum = sum(primeList)
+
     logger.debug("%i primes found"%primeCount)
     logger.info("Problem #10 Solution:")
-    logger.info("The sum of primes <= %i is %i"%(N,runningSum))
+    logger.info("The sum of primes <= %i is %i\n"%(N,primesSum))
 
     return
   
+def problem35():
+    """
+    Problem #35: How many circular primes are there below 1e6?
+    """
+
+    # Initialize
+    global primeList
+    num = [None]* 6  # Since it's < 1e6 we know there are 5 digits max
+    upperBound = 100
+   
+    # Main loop
+    for p in primeList:
+        # Check stopping condition
+        if p >= upperBound:
+            break
+
+        # Break up p into a 6 digit number, starting with the smallest
+        for i in reversed(xrange(6)):
+            num[i] = p%10
+            p /= 10
+
+
+
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -190,7 +233,8 @@ def main():
     problem1()
     problem2()
     problem10() 
-   
+#    problem35()    
+  
     # use logging to printout notification that program has terminated
     logger.info("------------------------------")
     logger.info("  Program end")    

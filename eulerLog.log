@@ -1,21 +1,24 @@
-2015-10-09 15:44:49,063 [ get_arguments:62 ] INFO: Level set to DEBUG
-2015-10-09 15:44:49,065 [ main:184 ] INFO: ------------------------------
-2015-10-09 15:44:49,065 [ main:185 ] INFO:   Program start
-2015-10-09 15:44:49,066 [ main:186 ] INFO: ------------------------------
-2015-10-09 15:44:49,066 [ problem1:79 ] DEBUG: Problem #1 iterations started
-2015-10-09 15:44:49,067 [ problem1:85 ] DEBUG: Iterations complete
-2015-10-09 15:44:49,068 [ problem1:90 ] INFO: Problem #1 Solution:
-2015-10-09 15:44:49,069 [ problem1:91 ] INFO: Sum of numbers on (0,1000) divisible by 3,5 is 33165
+2015-10-12 09:52:09,694 [ get_arguments:65 ] INFO: Level set to DEBUG
+2015-10-12 09:52:09,695 [ main:227 ] INFO: ------------------------------
+2015-10-12 09:52:09,696 [ main:228 ] INFO:   Program start
+2015-10-12 09:52:09,696 [ main:229 ] INFO: ------------------------------
+2015-10-12 09:52:09,697 [ problem10:149 ] DEBUG: No file found. Calculations beginning
+2015-10-12 09:52:09,697 [ problem10:156 ] DEBUG: Brute Force 'isPrime' loop start
+2015-10-12 09:52:10,560 [ problem10:175 ] DEBUG: 10% complete, 17985 primes found
+2015-10-12 09:52:12,123 [ problem10:175 ] DEBUG: 20% complete, 33861 primes found
+2015-10-12 09:52:14,175 [ problem10:175 ] DEBUG: 30% complete, 49099 primes found
+2015-10-12 09:52:16,626 [ problem10:175 ] DEBUG: 40% complete, 63952 primes found
+2015-10-12 09:52:19,420 [ problem10:175 ] DEBUG: 50% complete, 78499 primes found
+2015-10-12 09:52:22,527 [ problem10:175 ] DEBUG: 60% complete, 92939 primes found
+2015-10-12 09:52:25,903 [ problem10:175 ] DEBUG: 70% complete, 107127 primes found
+2015-10-12 09:52:29,525 [ problem10:175 ] DEBUG: 80% complete, 121128 primes found
+2015-10-12 09:52:33,399 [ problem10:175 ] DEBUG: 90% complete, 135073 primes found
+2015-10-12 09:52:37,500 [ problem10:175 ] DEBUG: 100% complete, 148934 primes found
+2015-10-12 09:52:37,768 [ problem10:180 ] DEBUG: Loop completed
+2015-10-12 09:52:37,772 [ problem10:185 ] DEBUG: 148934 primes found
+2015-10-12 09:52:37,773 [ problem10:186 ] INFO: Problem #10 Solution:
+2015-10-12 09:52:37,774 [ problem10:187 ] INFO: The sum of primes <= 2000000 is 142913828923
 
-2015-10-09 15:44:49,070 [ problem2:108 ] DEBUG: Variables initiated, begging loop
-2015-10-09 15:44:49,071 [ problem2:123 ] DEBUG: Loop terminated at value c=5702887
-2015-10-09 15:44:49,071 [ problem2:124 ] DEBUG: Last used value was c=3524578
-2015-10-09 15:44:49,072 [ problem2:125 ] INFO: Problem #2 Solution:
-2015-10-09 15:44:49,072 [ problem2:126 ] INFO: Sum of even Finonacci terms less than 4e6 = 4613732
-
-2015-10-09 15:44:49,073 [ problem10:140 ] DEBUG: Brute Force 'isPrime' loop start
-2015-10-09 15:44:49,935 [ problem10:159 ] DEBUG: 10% complete, 17985 primes found
-2015-10-09 15:44:51,453 [ problem10:159 ] DEBUG: 20% complete, 33861 primes found
-2015-10-09 15:44:53,503 [ problem10:159 ] DEBUG: 30% complete, 49099 primes found
-2015-10-09 15:44:55,852 [ problem10:159 ] DEBUG: 40% complete, 63952 primes found
-2015-10-09 15:44:58,521 [ problem10:159 ] DEBUG: 50% complete, 78499 primes found
+2015-10-12 09:52:37,775 [ main:239 ] INFO: ------------------------------
+2015-10-12 09:52:37,775 [ main:240 ] INFO:   Program end
+2015-10-12 09:52:37,776 [ main:241 ] INFO: ------------------------------
