@@ -24,7 +24,7 @@ import os.path
 # Globals
 # ******************************************************************************
 
-primeList = []  # Modified in problem10()
+primeList = []
 
 # ******************************************************************************
 # Functions
@@ -41,11 +41,12 @@ def get_arguments():
                        "verbose logging functionality")
     __args = parser.parse_args()
 
-    # Logger set up
+    # Logger initialization
     logger = logging.getLogger("eulerLog")
-    fh = logging.FileHandler("logs/eulerLog.log",mode="w")
-    ch = logging.StreamHandler()
+    fh = logging.FileHandler("logs/eulerLog.log",mode="w")  # File log
+    ch = logging.StreamHandler()  # Console log
 
+    # Logger formats
     logFileFormat = logging.Formatter(
         "%(asctime)s [ %(funcName)s:%(lineno)d ] %(levelname)s: %(message)s"
         )
@@ -127,13 +128,14 @@ def problem2():
     logger.debug("Last used value was c=%i"%a)
     logger.info("Problem #2 Solution:")
     logger.info("Sum of even Finonacci terms less than 4e6 = %i\n"%runningSum)
+
     return
+
 
 def problem10():
     """
     Problem 10: Find the sum of all primes below 2e6
     """
-    global primeList
 
     # Initialize
     N = 2e6      # Problem's upper bound
@@ -150,6 +152,8 @@ def problem10():
         N = 2e6
         primeCount = 2  # Accounting for 1 and 2 already
         n = 3
+
+        global primeList
         primeList.append(1)
         primeList.append(2)
         
@@ -171,7 +175,7 @@ def problem10():
             if n % (N/10.) == 0:
             # Status Update
                 percentComplete = n/float(N) * 100
-                logger.debug("%i%% complete, %i primes found"
+                logger.debug("%i%% of range checked, %i primes found"
                              %(percentComplete,primeCount)
                             )
             n += 1
@@ -188,6 +192,7 @@ def problem10():
 
     return
   
+
 def problem35():
     """
     Problem #35: How many circular primes are there below 1e6?
@@ -238,6 +243,7 @@ def problem35():
             if circPrime:
                 circPrimeList.append(p)
 
+
         numCircPrime = len(circPrimeList)
 
         logger.debug("Saving circular primes to a file")
@@ -247,6 +253,7 @@ def problem35():
     logger.info("There are %i circular primes under one million\n"%numCircPrime)
 
     return
+
 
 def sqrtEst(x=20):
     """
@@ -289,6 +296,7 @@ def sqrtEst(x=20):
     logger.info("The sqrt of %f is approx = %.8f\n"%(x,c))
 
     return
+
 
 # ******************************************************************************
 # Main
