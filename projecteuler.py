@@ -19,6 +19,7 @@ from math import *
 import argparse
 import numpy
 import os.path
+import random
 
 # ******************************************************************************
 # Globals
@@ -298,6 +299,161 @@ def sqrtEst(x=20):
     return
 
 
+def problem499():
+    """
+    Problem #499: St. Petersburg Lottery
+    """
+
+    # Initialize
+    N = 10000  # number of simulations
+    m = 2  # cost per game (pounds)
+    s0 = 10  # initial fortune (pounds), must be larger than m
+    safeZone = 10 * s0 # arbitrary number, if s reaches it, it's a "win"?
+    wins = 0
+    losses = 0
+
+    for n in xrange(1,N+1):
+    
+        s = s0
+     
+        while(1):
+
+            # pay to play the game
+            s -= m
+            pot = 1   
+
+            while(1):
+            
+                # Go through coin flip procedure
+                coinFlip = random.randrange(0,2)
+ 
+                if coinFlip == 1:
+                    pot *= 2
+
+                else:
+                    s += pot
+                    break
+         
+            if (s > safeZone):
+                wins += 1
+                break
+  
+            if (s < m):
+                losses += 1
+                break
+
+
+    winProb = wins/float(N)
+
+    logger.info("Problem #499 Solution:")
+    logger.info("AFTER %i SIMULATIONS:"%N)
+    logger.info("For m = %i, s = %i"%(m,s0))
+    logger.info("The probabilty of never running out of money is %.7f\n"%winProb)
+
+    return
+
+
+def problem436():
+    """
+    Problem #436: An unfair bet?
+    """
+
+    # Initialization
+    N = 1000000  # Number of simulations to run
+    xWins = 0
+    yWins = 0
+    ties = 0
+
+    for n in xrange(1,N+1):
+ 
+        # Set up
+        x = 0
+        y = 0
+        S = 0
+
+        # Player x's turn
+        while( S <= 1):
+            x = random.uniform(0,1)
+            S += x
+
+        # Player y's turn
+        while( S <= 2):
+            y = random.uniform(0,1)
+            S += y
+
+        # Determine winner
+        if (x > y):
+            xWins += 1
+
+        elif (x < y):
+            yWins += 1
+
+        else:
+            ties += 0
+
+     
+    xWinPrcnt = xWins / float(N) * 100
+    yWinPrcnt = yWins / float(N) * 100
+    
+    logger.info("Problem #436 Solution:")
+    logger.info("After %i Simulations"%N)
+    logger.info("Player x won %f%% of the time"%xWinPrcnt)
+    logger.info("Player y won %f%% of the time\n"%yWinPrcnt)
+
+
+    return
+
+
+def problem205():
+    """
+    Problem #205: Die vs Die
+    """    
+
+    # Initialize
+    N = 100000
+    peterWins_1 = 0
+    colinWins_1 = 0
+    peterWins_2 = 0
+    colinWins_2 = 0
+
+
+    for n in xrange(1,N):
+        
+        # First Roll
+        peterRoll = random.randrange(1,5)  # 4 sided die
+        colinRoll = random.randrange(1,7)  # 6 sided die
+
+        if peterRoll > colinRoll:
+            peterWins_1 += 1
+      
+        elif colinRoll > peterRoll:
+            colinWins_1 += 1
+
+        # Second Roll
+        peterRoll += random.randrange(1,5)  # 4 sided die
+        colinRoll += random.randrange(1,7)  # 6 sided die
+
+        if peterRoll > colinRoll:
+            peterWins_2+= 1
+      
+        elif colinRoll > peterRoll:
+            colinWins_2 += 1
+
+
+    peterWinPrcnt_1 = peterWins_1 / float(N) * 100
+    colinWinPrcnt_1 = colinWins_1 / float(N) * 100
+
+    peterWinPrcnt_2 = peterWins_2 / float(N) * 100
+    colinWinPrcnt_2 = colinWins_2 / float(N) * 100
+
+    logger.info("Problem #205 Solution")  
+    logger.info ("After %i Simulation:"%N)
+    logger.info("Peter (1 - 4 sided die) wins %f%% of the time"%peterWinPrcnt_1)
+    logger.info ("Colin (1 - 6 sided die) wins %f%% of the time"%colinWinPrcnt_1)
+    logger.info ("Peter (2 x 4 sided die) wins %f%% of the time"%peterWinPrcnt_2)
+    logger.info("Colin (2 x 6 sided die) wins %f%% of the time\n"%colinWinPrcnt_2)
+
+
 # ******************************************************************************
 # Main
 # ******************************************************************************
@@ -322,6 +478,9 @@ def main():
     problem10() 
     problem35()    
     sqrtEst()
+    problem499()
+    problem436()
+    problem205() 
 
     # use logging to printout notification that program has terminated
     logger.info("------------------------------")

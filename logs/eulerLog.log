@@ -1,23 +1,50 @@
-2015-10-13 10:16:24,307 [ get_arguments:66 ] INFO: Level set to DEBUG
-2015-10-13 10:16:24,310 [ main:318 ] INFO: ------------------------------
-2015-10-13 10:16:24,311 [ main:319 ] INFO:   Program start
-2015-10-13 10:16:24,312 [ main:320 ] INFO: ------------------------------
+2015-10-15 08:02:53,136 [ get_arguments:67 ] INFO: Level set to DEBUG
+2015-10-15 08:02:53,136 [ main:470 ] INFO: ------------------------------
+2015-10-15 08:02:53,137 [ main:471 ] INFO:   Program start
+2015-10-15 08:02:53,137 [ main:472 ] INFO: ------------------------------
 
-2015-10-13 10:16:24,314 [ problem1:83 ] DEBUG: Problem #1 iterations started
-2015-10-13 10:16:24,315 [ problem1:89 ] DEBUG: Iterations complete
-2015-10-13 10:16:24,315 [ problem1:94 ] INFO: Problem #1 Solution:
-2015-10-13 10:16:24,316 [ problem1:95 ] INFO: Sum of numbers on (0,1000) divisible by 3,5 is 33165
+2015-10-15 08:02:53,137 [ problem1:84 ] DEBUG: Problem #1 iterations started
+2015-10-15 08:02:53,137 [ problem1:90 ] DEBUG: Iterations complete
+2015-10-15 08:02:53,138 [ problem1:95 ] INFO: Problem #1 Solution:
+2015-10-15 08:02:53,138 [ problem1:96 ] INFO: Sum of numbers on (0,1000) divisible by 3,5 is 33165
 
-2015-10-13 10:16:24,318 [ problem2:112 ] DEBUG: Variables initiated, begging loop
-2015-10-13 10:16:24,318 [ problem2:127 ] DEBUG: Loop terminated at value c=5702887
-2015-10-13 10:16:24,319 [ problem2:128 ] DEBUG: Last used value was c=3524578
-2015-10-13 10:16:24,320 [ problem2:129 ] INFO: Problem #2 Solution:
-2015-10-13 10:16:24,321 [ problem2:130 ] INFO: Sum of even Finonacci terms less than 4e6 = 4613732
+2015-10-15 08:02:53,138 [ problem2:113 ] DEBUG: Variables initiated, begging loop
+2015-10-15 08:02:53,138 [ problem2:128 ] DEBUG: Loop terminated at value c=5702887
+2015-10-15 08:02:53,138 [ problem2:129 ] DEBUG: Last used value was c=3524578
+2015-10-15 08:02:53,139 [ problem2:130 ] INFO: Problem #2 Solution:
+2015-10-15 08:02:53,139 [ problem2:131 ] INFO: Sum of even Finonacci terms less than 4e6 = 4613732
 
-2015-10-13 10:16:24,322 [ problem10:144 ] DEBUG: Prime data file found
-2015-10-13 10:16:24,323 [ problem10:145 ] DEBUG: Reading in data from file
-2015-10-13 10:16:24,674 [ problem10:188 ] DEBUG: 148934 primes found
-2015-10-13 10:16:24,678 [ problem10:189 ] INFO: Problem #10 Solution:
-2015-10-13 10:16:24,679 [ problem10:190 ] INFO: The sum of primes <= 2000000 is 142913828923
+2015-10-15 08:02:53,139 [ problem10:146 ] DEBUG: Prime data file found
+2015-10-15 08:02:53,140 [ problem10:147 ] DEBUG: Reading in data from file
+2015-10-15 08:02:53,488 [ problem10:190 ] DEBUG: 148934 primes found
+2015-10-15 08:02:53,490 [ problem10:191 ] INFO: Problem #10 Solution:
+2015-10-15 08:02:53,490 [ problem10:192 ] INFO: The sum of primes <= 2000000 is 142913828923
 
-2015-10-13 10:16:24,681 [ problem35:212 ] DEBUG: No data file found, calculations beginning
+2015-10-15 08:02:53,491 [ problem35:209 ] DEBUG: Circular Prime Data file found
+2015-10-15 08:02:53,491 [ problem35:210 ] DEBUG: Reading in data from file
+2015-10-15 08:02:53,495 [ problem35:253 ] INFO: Problem #35 Solution:
+2015-10-15 08:02:53,495 [ problem35:254 ] INFO: There are 56 circular primes under one million
+
+2015-10-15 08:02:53,495 [ sqrtEst:296 ] INFO: After 35 iterations:
+2015-10-15 08:02:53,496 [ sqrtEst:297 ] INFO: The sqrt of 20.000000 is approx = 4.47213595
+
+2015-10-15 08:02:54,226 [ problem499:348 ] INFO: Problem #499 Solution:
+2015-10-15 08:02:54,227 [ problem499:349 ] INFO: AFTER 10000 SIMULATIONS:
+2015-10-15 08:02:54,227 [ problem499:350 ] INFO: For m = 2, s = 10
+2015-10-15 08:02:54,231 [ problem499:351 ] INFO: The probabilty of never running out of money is 0.9277000
+
+2015-10-15 08:02:56,143 [ problem436:398 ] INFO: Problem #436 Solution:
+2015-10-15 08:02:56,147 [ problem436:399 ] INFO: After 1000000 Simulations
+2015-10-15 08:02:56,151 [ problem436:400 ] INFO: Player x won 47.215300% of the time
+2015-10-15 08:02:56,152 [ problem436:401 ] INFO: Player y won 52.784700% of the time
+
+2015-10-15 08:02:56,454 [ problem205:449 ] INFO: Problem #205 Solution
+2015-10-15 08:02:56,458 [ problem205:450 ] INFO: After 100000 Simulation:
+2015-10-15 08:02:56,459 [ problem205:451 ] INFO: Peter (1 - 4 sided die) wins 24.944000% of the time
+2015-10-15 08:02:56,460 [ problem205:452 ] INFO: Colin (1 - 6 sided die) wins 58.259000% of the time
+2015-10-15 08:02:56,461 [ problem205:453 ] INFO: Peter (2 x 4 sided die) wins 20.030000% of the time
+2015-10-15 08:02:56,462 [ problem205:454 ] INFO: Colin (2 x 6 sided die) wins 69.270000% of the time
+
+2015-10-15 08:02:56,464 [ main:486 ] INFO: ------------------------------
+2015-10-15 08:02:56,466 [ main:487 ] INFO:   Program end
+2015-10-15 08:02:56,470 [ main:488 ] INFO: ------------------------------
